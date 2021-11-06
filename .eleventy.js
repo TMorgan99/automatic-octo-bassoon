@@ -1,10 +1,10 @@
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
 
-// Filters
+// Filters ( requires moment! )
 const dateFilter = require('./src/filters/date-filter.js');
 const w3DateFilter = require('./src/filters/w3-date-filter.js');
 
-// Transforms
+// Transforms ( requires html-minifier )
 const htmlMinTransform = require('./src/transforms/html-min-transform.js');
 
 // Create a helpful production flag
@@ -13,6 +13,9 @@ const isProduction = process.env.NODE_ENV === 'production';
 const sortByDisplayOrder = require('./src/utils/sort-by-display-order.js');
 
 module.exports = config => {
+
+  config.addPassthroughCopy('./src/images/');
+
   // Add filters
   config.addFilter('dateFilter', dateFilter);
   config.addFilter('w3DateFilter', w3DateFilter);

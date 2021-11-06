@@ -1,36 +1,27 @@
 {
-  "name": "eleventy-from-scratch",
-  "version": "1.0.0",
+  "name": "eleventy-from-scratch-master",
+  "version": "0.0.1",
   "description": "",
   "main": ".eleventy.js",
   "scripts": {
-    "start": "npx gulp && concurrently 'npx gulp watch' 'npx eleventy --serve'",
-    "production": "NODE_ENV=production npx gulp && NODE_ENV=production eleventy"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hankchizljaw/eleventy-from-scratch.git"
+    "all": "npm run clear ; npm run fonts ; npm run sass ; npm run dev",
+    "clear": "rm -rf ./.cache ./dist ./src/css ./src/_includes/css",
+    "fonts": "node ./tasks/fonts",
+    "sass": "npx sass ./src/scss/:./src/_includes/css",
+    "dev": "npx eleventy --serve",
+    "build": "npx eleventy"
   },
   "keywords": [],
-  "author": "",
+  "author": "Tim Morgan <tmorgan99@gmail.com>",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hankchizljaw/eleventy-from-scratch/issues"
-  },
-  "homepage": "https://github.com/hankchizljaw/eleventy-from-scratch#readme",
   "dependencies": {
-    "@11ty/eleventy": "^0.11.0",
-    "@11ty/eleventy-cache-assets": "^2.0.2",
-    "@11ty/eleventy-plugin-rss": "^1.0.7",
-    "concurrently": "^5.2.0",
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-cache-assets": "^2.3.0",
+    "@11ty/eleventy-plugin-rss": "^1.1.2",
     "get-google-fonts": "^1.2.2",
-    "gorko": "^0.2.0",
-    "gulp": "^4.0.2",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-sass": "^4.1.0",
+    "gorko": "^0.8.0",
     "html-minifier": "^4.0.0",
-    "moment": "^2.26.0",
-    "sass": "^1.26.8"
+    "moment": "^2.29.1",
+    "sass": "^1.43.4"
   }
 }

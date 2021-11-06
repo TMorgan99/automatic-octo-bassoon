@@ -1,4 +1,4 @@
-const {dest, src} = require('gulp');
+// const {dest, src} = require('gulp');
 const GetGoogleFonts = require('get-google-fonts');
 
 const fonts = async () => {
@@ -17,4 +17,5 @@ const fonts = async () => {
   return result;
 };
 
-module.exports = fonts;
+fonts();
+// module.exports = fonts;
