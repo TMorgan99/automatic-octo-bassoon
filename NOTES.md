@@ -74,10 +74,9 @@ Then it gives the steps to follow
 # 4. Create a new repo in GitHub https://github.com/new
 
 # 5. Link the remote repo with this local directory
-   git remote add origin git@github.com:YourGithubName/your-repo-slug.git
-
-# 6. Push up your files
-   git push -u origin main
+# ( select the third option in the Github quick setup )
+# …or push an existing repository from the command line
+# this has your slug filled in for you.
 
 # 7. Initialize your Netlify Site
    netlify init

@@ -1,7 +1,7 @@
 {
   "name": "eleventy-from-scratch-master",
   "version": "0.0.1",
-  "description": "",
+  "description": "eleventy from scratch up to date",
   "main": ".eleventy.js",
   "scripts": {
     "all": "npm run clear ; npm run fonts ; npm run sass ; npm run dev",
