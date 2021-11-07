@@ -9,7 +9,8 @@
     "fonts": "node ./tasks/fonts",
     "sass": "npx sass ./src/scss/:./src/_includes/css",
     "dev": "npx eleventy --serve",
-    "build": "npx eleventy"
+    "build": "npx eleventy",
+    "production": "npm run fonts ; npm run sass ; npm run build"
   },
   "keywords": [],
   "author": "Tim Morgan <tmorgan99@gmail.com>",
